@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> jQuery Demo</title>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+	<h1>jQuery Demo</h1>
+	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<input type="text" id="press" size="10">
+	<br>
+	<br>
+
+	<script type="text/javascript">
+
+		// let design = {
+		// 	color: "blue",
+		// 	background: "green",
+		// 	border: "3px solid black"
+		// }
+
+		$(document).ready(function(){
+			// $("button").click(function(){
+			// 	alert("Value: " + $("#sometext").val());
+			// });
+
+			// $("#press").on("keypress", function(){
+			// 	$("p").hide();
+			// });
+
+			// $("button").click(function(){
+			// 	$("#one").fadeIn();
+			// 	$("#two").fadeIn("slow");
+			// 	$("#three").fadeIn(3000);
+			// });
+
+			// $("#drag").draggable();
+
+			$("#date").datepicker();
+
+
+		});
+
+	</script>
+
+	<input type="text" id="sometext" value="">
+	<button>Submit</button>
+
+	<br><br>
+
+	<button>Flag</button><br>
+	<div class="fade">
+		<div id="one" style="width: 2200; height: 60px; display: none; background-color: orange"></div>
+		<div id="two" style="width: 2200; height: 60px; display: none; background-color: white"></div>
+		<div id="three" style="width: 2200; height: 60px; display: none; background-color: green"></div>
+	</div>
+
+
+	<style type="text/css">
+		#drag{
+			width: 150px;
+			height: 60px;
+			background-color: blueviolet;
+		}
+	</style>
+
+	<br><br>
+	<div id="drag">
+		<p>Drag me around</p>
+	</div>
+
+	<br><br>
+
+	<input type="text" id="date" size="10">
+
+</body>
+</html>
