@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Demo</title>
+
+	<!-- bootstrap css framework -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- jquery cdn -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	
+	<!-- icons -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	
+	<!-- bootstrap javascript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	
+	<div class="container">
+
+		<!-- alert -->
+		<div class="alert alert-primary">
+			<strong>Well Done!</strong>
+			<p>You have successfully created an alert.</p>
+		</div><br>
+
+
+		<!-- buttons -->
+		<a href="#" class="btn btn-primary">Submit</a> &nbsp;&nbsp;
+		<a href="#" class="btn btn-outline-primary">Submit</a> <br><br>
+		<a href="#" class="btn btn-success">Submit</a> &nbsp;&nbsp;
+		<a href="#" class="btn btn-outline-success">Submit</a> <br><br>
+		<a href="#" class="btn btn-danger">Submit</a> &nbsp;&nbsp;
+		<a href="#" class="btn btn-outline-danger">Submit</a> <br><br>
+		<a href="#" class="btn btn-info">Submit</a> &nbsp;&nbsp;
+		<a href="#" class="btn btn-outline-info">Submit</a> <br><br>
+		<a href="#" class="btn btn-warning">Submit</a> &nbsp;&nbsp;
+		<a href="#" class="btn btn-outline-warning">Submit</a> <br><br>
+
+		<a href="#" class="btn btn-primary btn-block">Submit</a><br>
+
+
+		<!-- dropdowns -->
+		<div class="btn-group">
+			<button class="btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Dropdown
+			</button>
+
+			<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+
+				<a href="#" class="dropdown-item">Home</a>
+				<a href="#" class="dropdown-item">Shop</a>
+				<a href="#" class="dropdown-item">Cart</a>
+				<a href="#" class="dropdown-item">Checkout</a>
+
+				<div class="dropdown-divider"></div>
+				<a href="#" class="dropdown-item">Profile</a>
+
+			</div>
+		</div><br><br>
+
+
+		<!-- button grouping -->
+		<div class="btn-group-vertical">
+			<a href="#" class="btn btn-success">One</a>
+			<a href="#" class="btn btn-outline-success">Two</a>
+			<a href="#" class="btn btn-success">Three</a>
+		</div> &nbsp;&nbsp;
+
+		<div class="btn-group">
+			<a href="#" class="btn btn-danger">One</a>
+			<a href="#" class="btn btn-outline-danger">Two</a>
+			<a href="#" class="btn btn-danger">Three</a>
+		</div> &nbsp;&nbsp;
+
+
+		<!-- checkboxes -->
+		<div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+			<label class="btn btn-outline-primary active">
+				<input type="checkbox" name="">Checkbox 1
+			</label>
+			
+			<label class="btn btn-outline-primary">
+				<input type="checkbox" name="">Checkbox 2
+			</label>
+
+		</div><br><br>
+
+
+		<!-- cards -->
+		<div class="card bg-primary text-white mb-3 text-center">
+			<div class="card-body">
+				<blockquote class="card-blockquote">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat</p>
+					<footer>
+						John Doe
+						<cite title="title">Jane</cite>
+					</footer>
+				</blockquote>
+			</div>
+		</div>
+
+
+		<!-- jumbotron -->
+		<div class="jumbotron">
+			<h1 class="display-3">Welcome to my website</h1>
+			<p class="lead">This is a simple jumbotron that draws attention</p>
+			<hr class="my-4">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="#" class="btn btn-info">Learn More!</a>
+		</div>
+
+
+		<!-- lists -->
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-primary">One</li>
+			<li class="list-group-item">Two</li>
+			<li class="list-group-item">Three</li>
+			<li class="list-group-item">Four</li>
+			<li class="list-group-item justify-content-between"> Andante Allegro
+				<span class="badge badge-primary">This is also a part</span>
+			</li>
+			<li class="list-group-item justify-content-between">
+				<span class="badge badge-primary badge-pill">This is also a part</span>
+			</li>
+		</ul><br><br>
+
+
+		<!-- pagination -->
+		<nav aria-label="Page navigation example">
+			<ul class="pagination">
+				<li class="page-item">
+					<a href="#" class="page-link">Previous</a>
+				</li>
+				<li class="page-item">
+					<a href="#" class="page-link">Page 1</a>
+				</li>
+				<li class="page-item">
+					<a href="#" class="page-link">Page 2</a>
+				</li>
+				<li class="page-item">
+					<a href="#" class="page-link">Next</a>
+				</li>
+			</ul>
+		</nav><br>
+
+
+		<!-- progress bar -->
+		<h5>Progress Bar</h5>
+		<div class="progress">
+			<div class="progress-bar progress-bar-stripped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+		</div><br><br>
+
+
+		<!-- tables -->
+		<table class="table table-hover table-stripped">
+			<thead class="thead-dark">
+				<tr>
+					<th>First Name</th>
+					<th>Second Name</th>
+					<th>Third Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Aryya</td>
+					<td>Michael</td>
+					<td>Paul</td>
+				</tr>
+				<tr>
+					<td>Adam</td>
+					<td>Stanton</td>
+					<td>Gilchrist</td>
+				</tr>
+				<tr>
+					<td>Ricky</td>
+					<td>Martin</td>
+					<td>Ponting</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
