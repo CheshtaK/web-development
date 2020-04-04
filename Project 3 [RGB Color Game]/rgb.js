@@ -1,75 +1,91 @@
-var square = document.querySelectorAll(".square");
+var squares = document.querySelectorAll(".square");
 var reset = document.querySelector("#reset");
 var message = document.querySelector("#message");
 var body = document.querySelector("body");
 var header = document.querySelector("header");
+var goal = document.querySelector("#goal");
 
-var color = [];
-var winColor, winIndex, goal;
-var numSquare = 6;
-setSquareColor(numSquare);
+var numSquares = 6;
+var colors = getColors(numSquares);
+fillSquares(numSquares);
+var pickedColor = pickColor(colors);
+goal.textContent = pickedColor; 
 
 body.style.backgroundColor = "#232323";
+reset.addEventListener("click", resetGame);
 
-//anytime a square is clicked
-for(var i=0; i<square.length; i++){
-	square[i].addEventListener('click', function(){
 
-		if(winColor == this.style.backgroundColor)
-			convertAll(winColor);
-		else{
-			this.style.backgroundColor = body.style.backgroundColor;
-			message.textContent = "Try Again!";
+//event listeners to the squares
+for(var i = 0; i < squares.length; i++) {
+	squares[i].addEventListener("click", function() {
+		var clickedColor = this.style.background;
+		
+		if(clickedColor === pickedColor) {
+			message.textContent = "Correct!";
+
+			for(var i = 0; i < squares.length; i++) {
+				squares[i].style.background = pickedColor;
+			}
+
+			header.style.background = pickedColor;
+			reset.textContent = "Play Again?";
+		} 
+		
+		else {
+			message.textContent = "Incorrect";
+			this.style.background = "#232323";
 		}
-
 	});
 }
 
-//when you win
-function convertAll(){
 
-	for(var i=0; i<square.length; i++){
-		square[i].style.backgroundColor = winColor.toString();
-		header.style.backgroundColor = winColor.toString();
-		reset.textContent = "Play Again?";
-		message.textContent = "Correct!";
-	}
-
-}
-
-function rgbGen(){
-
-	//generate the three colour streams
-	var red = Math.floor(Math.random() * (256));
-	var green = Math.floor(Math.random() * (256));
-	var blue = Math.floor(Math.random() * (256));
-
-	var genColor = "RGB (" + red.toString() + ", " + green.toString() + ", " + blue.toString() + ")";
-	return genColor;
-}
-
-function setSquareColor(numSquare){
-
+//resets the game
+function resetGame(){
 	header.style.backgroundColor = "steelblue";
-	color.length = numSquare;
-
-	//generating 6 colours
-	for(var i=0; i<numSquare; i++)
-		color[i] = rgbGen();
-
-	//setting the 6 colours to the squares
-	for(var i=0; i<numSquare; i++)
-		square[i].style.backgroundColor = color[i].toString();
-
-	winIndex = Math.floor(Math.random() * (color.length)); //set the winning color at random
-
-	goal = document.querySelector("#goal");
-	goal.textContent = color[winIndex]; //setting the array index
-	winColor = color[winIndex]; //setting the color that is the winning color
 	message.textContent = "";
+	reset.textContent = "New Color";
+
+	colors = getColors(numSquares);
+	fillSquares(squares, colors);
+	pickedColor = pickColor(colors);
+	goal.textContent = pickedColor;
 }
 
-reset.addEventListener("click", function(){
-	setSquareColor(numSquare);
-	reset.textContent = "New Colors";
-});
+
+//returns array of colors
+function getColors(num){
+	var arr = [];
+	for(var i = 0; i < num; i++) {
+		arr.push(makeColor());
+	}
+	return arr;
+}
+
+
+//picks a color from a bunch of choices
+function pickColor(choices) {
+	var random = Math.floor(Math.random() * choices.length);
+	return choices[random];
+}
+
+
+//fills all squares with the colors
+function fillSquares(squares, colors) {
+	for(var i = 0; i < squares.length; i++) {
+		squares[i].style.display = "block";
+		if(colors[i]) {
+			squares[i].style.background = colors[i];
+		} else {
+			squares[i].style.display = "none";
+		}
+	}
+}
+
+
+//generates an r,g,b value for a color
+function makeColor() {
+	var r = Math.floor(Math.random() * 256); 
+	var g = Math.floor(Math.random() * 256);
+	var b = Math.floor(Math.random() * 256);
+	return "rgb(" + r + ", " + g + ", " + b + ")";
+}
