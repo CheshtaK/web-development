@@ -1,0 +1,24 @@
+<h1>App Component</h1>
+
+<!-- <app-server></app-server> -->
+<div class="app-server"></div>
+<br><br><br>
+
+<!-- String interpolation -->
+<h4>Server name {{ServerName}} with Pid {{ServerPID}} is {{ServerStatus}}</h4>
+
+<!-- Property Binding-->
+<!-- <button [disabled]="buttonDisabled">Toggle Server Status</button> -->
+
+<!-- Event Binding -->
+<button [disabled]="buttonDisabled" (click)="toggleServerStatus()">Toggle Server Status</button>
+<br><br><br>
+
+<!-- Two Way Binding -->
+<h2>Input Server Information</h2>
+<input type="text" placeholder="Server Name" [(ngModel)]="ServerName">
+<h3>Display Server Information</h3>
+<p>{{ServerName}}</p>
+<p>{{ServerPID}}</p>
+<p>{{ServerStatus}}</p>
+<button [disabled]="buttonDisabled" (click)="toggleServerStatus()">Toggle Server Status</button>

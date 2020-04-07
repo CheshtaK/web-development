@@ -1,0 +1,21 @@
+<!-- Built-in Directives -->
+<!-- ngif, ngstyle, ngclass-->
+
+<h1 [ngStyle]="{color: getColor()}">This is an example of ngif</h1>
+
+<h2 [ngClass]="{white: flag}">This is just an example of ngclass</h2>
+
+<p *ngIf="flag; else elseblock">Flag is true</p>
+<ng-template #elseblock>
+    <p>Flag is false</p>
+</ng-template>
+
+<button (click)="toggleFlag()">Toggle Flag</button>
+<br><br><br>
+
+<!-- ngfor -->
+<h1>Student Roster</h1>
+<input type="text" placeholder="Name" [(ngModel)]="currentName">
+<button (click)="add()">Submit Student Name</button>
+
+<li *ngFor = "let names of studentRoster">{{names}}</li>
