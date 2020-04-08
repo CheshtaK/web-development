@@ -1,0 +1,13 @@
+<br><br>
+<div *ngIf="course">
+    <h2>{{course.name}} Details</h2>
+    <div><label>ID: </label>{{course.id}}
+    </div>
+    
+    <div>
+        <label>Name: 
+            <input [(ngModel)]="course.name" placeholder="Name"/>
+        </label>
+    </div>
+    <button (click)="goBack()">Go Back</button>
+</div>
