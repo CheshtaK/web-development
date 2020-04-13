@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script>
+		function validateForm(){
+			var name = document.myform.name.value;
+			var password = document.myform.password.value;
+
+			if(name == null || name == ""){
+				alert("Name cannot be blank");
+				return false;
+			}
+			else if(password.length < 6){
+				alert("Password must be atleast 6 characters long");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		<form name="myform" method="post" onsubmit="return validateForm()" action="text.html">
+			<label>Name: </label>
+			<input type="text" name="name"><br><br>
+
+			<label>Password: </label>
+			<input type="password" name="password"><br><br>
+
+			<input type="submit" value="Register">
+		</form>
+	</div>
+</body>
+</html>
