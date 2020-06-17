@@ -1,22 +1,6 @@
 # `Web Development`
 A mere utilization of the 68 days of lockdown
 
-## Contents
-
-- [HTML](https://github.com/CheshtaK/web-development/tree/master/HTML)
-
-- [Bootstrap](https://github.com/CheshtaK/web-development/tree/master/Bootstrap)
-
-- [JavaScript](https://github.com/CheshtaK/web-development/tree/master/JavaScript)
-
-- [jQuery](https://github.com/CheshtaK/web-development/tree/master/jQuery)
-
-- [Angular](https://github.com/CheshtaK/web-development/tree/master/Angular)
-
-- [ReactJS](https://github.com/CheshtaK/web-development/tree/master/ReactJS)
-
-- [NodeJS](https://github.com/CheshtaK/web-development/tree/master/NodeJS)
-
 ## Mini Projects
 
 - [Blog](https://github.com/CheshtaK/web-development/tree/master/Mini%20Projects/Project%201%20%5BBlog%5D) - A simple blog using HTML and CSS
